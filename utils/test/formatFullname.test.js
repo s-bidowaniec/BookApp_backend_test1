@@ -12,8 +12,6 @@ describe('formatFullname', () => {
     it('should return error if "content" arg dos not match "firstname lastname" format', () => {
         expect(formatFullname("John")).to.equal('Error');
         expect(formatFullname("John Doe Senior")).to.equal('Error');
-        expect(formatFullname("123 Doe")).to.equal('Error');
-        expect(formatFullname("123 456")).to.equal('Error');
     })
     it('should return proper name string', () => {
         expect(formatFullname("jOHn dOE")).to.equal('John Doe');

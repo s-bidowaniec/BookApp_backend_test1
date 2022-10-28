@@ -1,11 +1,7 @@
 module.exports = (fullName) => {
-  // Helpers
-  const reIsAlpha = new RegExp("[a-zA-Z]|\\s", "g");
-  const isAlpha = string => string.match(reIsAlpha).length === string.length;
   // Format check
   const fullNameIsString = typeof fullName === 'string';
-  const fullNameIsAlpha = fullNameIsString && isAlpha(fullName);
-  const fullNameProperFormat = fullNameIsAlpha && fullName.split(' ').length === 2;
+  const fullNameProperFormat = fullNameIsString && fullName.split(' ').length === 2;
   if(!fullNameProperFormat){
     return 'Error'
   }
